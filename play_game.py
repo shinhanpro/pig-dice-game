@@ -26,7 +26,26 @@ def play_game(n,target_score):
                         break             
             elif user_pick=="bank":
                 break
-               
+    def com_loop_game(target_score):
+        nonlocal winner
+        nonlocal check
+        while True:
+            com_pick= randint(0,1)
+            if com_pick==0:
+                roll=randint(1,6)
+                print(f"주사위 값은 {roll}입니다.")                    
+                if roll==1:
+                    users_score[turn]=0
+                    break
+                else:
+                    users_score[turn]+=roll   
+                    if users_score[turn]>=target_score:
+                        check=True
+                        winner=turn         
+                        break                                                                 
+            elif com_pick==1:
+                break
+                          
     while True:
         if check==True: #승자가 발생하면?
             print(f"winner는 {winner}입니다 (0=user,1~n=com)")
