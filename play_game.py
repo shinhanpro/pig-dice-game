@@ -54,7 +54,6 @@ def play_game(n,target_score):
         if(turn==0): #사용자 턴이라면?
             print(f"{turn}유저의 차례입니다.")
             user_loop_game(target_score)
-            print("check",check)
             print(f"{users_score[turn]}점 입니다")
 
         else: #컴퓨터 턴이라면?
