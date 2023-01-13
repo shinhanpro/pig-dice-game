@@ -27,5 +27,6 @@ python pig_dice_game.py
    
 #### 참고
 
-[GAME | pig dice game](https://www.mathsweek.ie/2021/games/pig.html)
-[DOCS | Optimal Play of the Dice Game Pig](https://cupola.gettysburg.edu/cgi/viewcontent.cgi?article=1003&context=csfac)
+- [GAME | pig dice game](https://www.mathsweek.ie/2021/games/pig.html)
+
+- [DOCS | Optimal Play of the Dice Game Pig](https://cupola.gettysburg.edu/cgi/viewcontent.cgi?article=1003&context=csfac)
