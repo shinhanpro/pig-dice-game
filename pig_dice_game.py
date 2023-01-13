@@ -1,5 +1,5 @@
 import play_game
-from common import print_char_repeat ,user_input_n,user_input
+from common import print_char_repeat ,user_input_n,user_input,result_print
 
 
 def game_opening():
@@ -17,9 +17,10 @@ def game_opening():
 
 # 게임 오프닝 화면 출력
 n,user_name,target_score=game_opening()
-
+cnt=0
 winner_list={}
 while True : 
+    cnt+=1
     winner_id=play_game.play_game(n,target_score)
     winner_list.setdefault(winner_id,0)
     winner_list[winner_id]+=1
@@ -28,6 +29,6 @@ while True :
     print(is_again)
     if is_again=='N':
         # todo = 최종결과 출력해주기
-        print(winner_list)
+        result_print(winner_list,cnt,user_name)
         break
 
