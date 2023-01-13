@@ -18,5 +18,16 @@ def game_opening():
 # 게임 오프닝 화면 출력
 n,user_name,target_score=game_opening()
 
+winner_list={}
+while True : 
+    winner_id=play_game.play_game(n,target_score)
+    winner_list.setdefault(winner_id,0)
+    winner_list[winner_id]+=1
 
-play_game.play_game(n,target_score)
+    is_again=user_input("게임을 재시작하시겠습니까? (Y/N) > \n")
+    print(is_again)
+    if is_again=='N':
+        # todo = 최종결과 출력해주기
+        print(winner_list)
+        break
+
