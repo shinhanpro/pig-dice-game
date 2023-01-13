@@ -45,7 +45,7 @@ def play_game(n,target_score):
                         break                                                                 
             elif com_pick==1:
                 break
-                          
+
     while True:
         if check==True: #승자가 발생하면?
             print(f"winner는 {winner}입니다 (0=user,1~n=com)")
@@ -53,11 +53,13 @@ def play_game(n,target_score):
         turn=i%n
         if(turn==0): #사용자 턴이라면?
             print(f"{turn}유저의 차례입니다.")
+            user_loop_game(target_score)
             print("check",check)
             print(f"{users_score[turn]}점 입니다")
 
         else: #컴퓨터 턴이라면?
             print(f"{turn}컴퓨터의 차례입니다.")
+            com_loop_game(target_score)
             print(f"{users_score[turn]}점 입니다")
         i+=1 #턴 변경을 위해 추가 
 #play_game(3,20)       
