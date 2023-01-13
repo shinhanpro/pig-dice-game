@@ -1,5 +1,5 @@
 from random import randint
-#n, target_score
+from common import print_char_repeat ,user_input_n,user_input
     
 def play_game(n,target_score):
     winner=0
@@ -11,7 +11,7 @@ def play_game(n,target_score):
         nonlocal winner
         nonlocal check
         while True:
-            user_pick= input("enter roll or bank: ")#roll or bank 입력 받기
+            user_pick= input("주사위를 더 돌릴지 멈출지 선택하세요. (roll or bank): ")#roll or bank 입력 받기
             if user_pick=="roll":
                 roll=randint(1,6)
                 print(f"주사위 값은 {roll}입니다.")
@@ -47,19 +47,21 @@ def play_game(n,target_score):
                 break
 
     while True:
+        print_char_repeat('-',40)
         if check==True: #승자가 발생하면?
             print(f"winner는 {winner}입니다 (0=user,1~n=com)")
+            return winner
             break
         turn=i%n
         if(turn==0): #사용자 턴이라면?
-            print(f"{turn}유저의 차례입니다.")
+            print(f"당신의 차례입니다!")
             user_loop_game(target_score)
             print(f"{users_score[turn]}점 입니다")
 
         else: #컴퓨터 턴이라면?
-            print(f"{turn}컴퓨터의 차례입니다.")
+            print(f"{turn}번째 컴퓨터의 차례입니다.")
             com_loop_game(target_score)
             print(f"{users_score[turn]}점 입니다")
-        i+=1 #턴 변경을 위해 추가 
+        i+=1 #턴 변경을 위해 추가
 #play_game(3,20)       
     
