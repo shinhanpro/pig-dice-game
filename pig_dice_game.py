@@ -30,4 +30,4 @@ def game_opening():
 
 
 # 게임 오프닝 화면 출력
-game_opening()
+n,user_name,target_score=game_opening()
