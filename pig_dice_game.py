@@ -20,7 +20,9 @@ def game_opening():
     print_char_repeat('-',40)
     print(f"{'Pig Dice Game에 오신걸 환영합니다':^32}")
     print_char_repeat('-',40)
-  
+    n=user_input_n('참여할 인원을 입력해주세요 ex) 7(숫자) \n > ')
+    print_char_repeat('-',40)
+   
 
 
 
