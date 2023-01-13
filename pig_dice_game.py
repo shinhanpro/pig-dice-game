@@ -1,22 +1,6 @@
 import play_game
+from common import print_char_repeat ,user_input_n,user_input
 
-def print_char_repeat(char,num):
-    chars=''
-    for _ in range(num):
-        chars+=char
-    print(chars)
-
-
-def user_input_n(msg):
-    try :
-        n=int(input(f"{msg:^32}"))
-        return n
-    except ValueError:
-        return user_input_n(msg)
-
-def user_input(msg):
-    user_str=input(f'{msg:^32}')
-    return  user_str
 
 def game_opening():
     print_char_repeat('-',40)
@@ -33,4 +17,6 @@ def game_opening():
 
 # 게임 오프닝 화면 출력
 n,user_name,target_score=game_opening()
+
+
 play_game.play_game(n,target_score)
