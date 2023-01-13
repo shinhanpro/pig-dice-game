@@ -22,7 +22,9 @@ def game_opening():
     print_char_repeat('-',40)
     n=user_input_n('참여할 인원을 입력해주세요 ex) 7(숫자) \n > ')
     print_char_repeat('-',40)
-   
+    user_name= user_input('당신의 이름을 알려주세요 ex) MEME \n> ')
+    print_char_repeat('-',40)
+ 
 
 
 
