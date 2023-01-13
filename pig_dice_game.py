@@ -24,7 +24,8 @@ def game_opening():
     print_char_repeat('-',40)
     user_name= user_input('당신의 이름을 알려주세요 ex) MEME \n> ')
     print_char_repeat('-',40)
- 
+    target_score=user_input_n('목표 점수를 입력해주세요 ex) 50 \n > ')
+    print_char_repeat('-',40)
 
 
 
