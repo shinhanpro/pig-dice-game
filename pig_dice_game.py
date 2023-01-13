@@ -1,3 +1,5 @@
+import play_game
+
 def print_char_repeat(char,num):
     chars=''
     for _ in range(num):
@@ -31,3 +33,4 @@ def game_opening():
 
 # 게임 오프닝 화면 출력
 n,user_name,target_score=game_opening()
+play_game.play_game(n,target_score)
