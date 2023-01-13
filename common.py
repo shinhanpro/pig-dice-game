@@ -4,6 +4,18 @@ def print_char_repeat(char,num):
         chars+=char
     print(chars)
 
+def roll_back_check(input):
+    if input=="roll" or input=="bank":
+        return True
+    return False
+
+def yes_no_check():
+
+    input=user_input("게임을 재시작하시겠습니까? (Y/N) > \n")
+    if input=="Y" or input=="N":
+        return input
+        
+    return yes_no_check()
 
 def user_input_n(msg):
     try :
