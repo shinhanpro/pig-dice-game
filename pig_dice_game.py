@@ -1,5 +1,5 @@
 import play_game
-from common import print_char_repeat ,user_input_n,user_input,result_print
+from common import print_char_repeat ,user_input_n,user_input,result_print,yes_no_check
 
 
 def game_opening():
@@ -25,10 +25,9 @@ while True :
     winner_list.setdefault(winner_id,0)
     winner_list[winner_id]+=1
 
-    is_again=user_input("게임을 재시작하시겠습니까? (Y/N) > \n")
-    print(is_again)
+    is_again=yes_no_check()
+    
     if is_again=='N':
-        # todo = 최종결과 출력해주기
         result_print(winner_list,cnt,user_name)
         break
 

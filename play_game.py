@@ -1,5 +1,5 @@
 from random import randint
-from common import print_char_repeat ,user_input_n,user_input
+from common import print_char_repeat ,roll_back_check
     
 def play_game(n,target_score):
     winner=0
@@ -12,6 +12,9 @@ def play_game(n,target_score):
         nonlocal check
         while True:
             user_pick= input("주사위를 더 돌릴지 멈출지 선택하세요. (roll or bank): ")#roll or bank 입력 받기
+            if roll_back_check(user_pick)==False:
+                print("잘못된 값을 입력하셨습니다. 제대로 된 값을 입력해주세요")
+                continue
             if user_pick=="roll":
                 roll=randint(1,6)
                 print(f"주사위 값은 {roll}입니다.")
