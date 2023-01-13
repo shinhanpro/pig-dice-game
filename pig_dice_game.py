@@ -10,7 +10,7 @@ def user_input_n(msg):
         n=int(input(f"{msg:^32}"))
         return n
     except ValueError:
-        user_input_n(msg)
+        return user_input_n(msg)
 
 def user_input(msg):
     user_str=input(f'{msg:^32}')
@@ -26,7 +26,7 @@ def game_opening():
     print_char_repeat('-',40)
     target_score=user_input_n('목표 점수를 입력해주세요 ex) 50 \n > ')
     print_char_repeat('-',40)
-
+    return (n,user_name,target_score)
 
 
 # 게임 오프닝 화면 출력
